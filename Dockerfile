@@ -13,5 +13,6 @@ EXPOSE 30303
 VOLUME /root/.ethereum
 
 COPY entrypoint.sh prepare.sh genesis.json /
+RUN chmod +x /entrypoint.sh prepare.sh
 
 ENTRYPOINT ["/entrypoint.sh", "--rpc", "--rpcaddr", "0.0.0.0", "--syncmode=fast", "--maxpeers", "150", "init", "/genesis.json"]

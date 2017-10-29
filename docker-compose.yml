@@ -1,0 +1,5 @@
+version: '2'
+services:
+  geth:
+    build: .
+    command: ["geth", "--datadir", "/.root/ethereum/node1", "--networkid", "52648"]
